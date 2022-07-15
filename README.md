@@ -84,4 +84,14 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
 
   No sufre ningun tipo de recarga de página, ya que el código de la página se carga en tiempo de ejecución esto es [Single Page Application](https://nextjs.org/docs/routing/introduction#linking-between-pages)
 
-  
+## UnderTheHood enlazando páginas: prefetching automático
+  - Corremos nuestro build de producción con "npm run build" y servidor en producción con "npm run start".
+  Prefetching: es una técnica que permite cargar el código de una página en tiempo de ejecución, para que el usuario no tenga que esperar a que se cargue la página.
+
+  Usar prefetch es recomendable para cargar páginas pesadas, es el mayor propósito. El navegador en últimas tomará la decisión de qué tanto guardar en el prefetch.
+
+  Qué hay que tener en cuenta para prefetch:
+
+    Que si los archivos a hacer prefetch son muy pesados, es posible que nunca se realice el prefetch porque nunca acaba.
+
+  Es por eso que Next.JS usa un enfoque de múltiples archivos hacerlos portables y pequeños
