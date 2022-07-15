@@ -37,3 +37,9 @@ Curso de Next.js
     - Creamos nuestro directorio de proyecto "pages"
     - Corremos "npm run dev"
 
+## Rutas básicas
+  - Rutas Estáticas: Son las que son sencillas y no necesitan de una API
+  - Rutas Dinámicas: Son aquellas que se generan de una forma consecutiva dependiendo de variables de entrada
+
+  ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-12-04%20a%20la%28s%29%201.05.11-19974b7e-13dd-4ce9-9858-e9dd903e8159.jpg)
+
