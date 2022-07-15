@@ -49,3 +49,10 @@ Curso de Next.js
 
   [Dynamic Routes](https://nextjs.org/docs/routing/dynamic-routes)
 
+## UnderTheHood setup y páginas: optimizaciones ocultas
+  - UnderTheHood: Es el proceso de optimización de código que se realiza en el servidor
+    next build : para producción 
+    next start : servidor node que trae nextjs para producción
+  - Code splitting es una técnica que permite dividir el código en partes independientes y cargarlas en tiempo de ejecución
+  - chunks: es una parte de código que se carga en tiempo de ejecución
+
