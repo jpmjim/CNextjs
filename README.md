@@ -14,5 +14,26 @@ Curso de Next.js
 
 ## Nuestro proyecto y lo que necesitaremos
   [Repo del proyecto](https://github.com/jonalvarezz/platzi-nextjs)
-  
+
   [Desplegado en Vercel](https://platzi-avo.vercel.app/)
+
+## Instalando NextJS
+  [Nextjs](https://nextjs.org/docs/getting-started)
+
+  Requisitos:
+  - Tener node.js instalado en su computadora mayor a la versión 12.0.0
+  - Git instalado en su computadora
+  - Browser chrome o firefox
+
+  Instalación:
+  - CLI npm create next-app
+  - Manual:
+    - Inicializar el proyecto: npm init -y
+    - Instalamos nextjs npm install next react react-dom
+    - Configuramos nuestros scripts:
+      - dev: next
+      - build: next build
+      - start: next start
+    - Creamos nuestro directorio de proyecto "pages"
+    - Corremos "npm run dev"
+

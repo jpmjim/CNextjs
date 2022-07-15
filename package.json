@@ -1,0 +1,27 @@
+{
+  "name": "cnextjs",
+  "version": "1.0.0",
+  "description": "Curso de Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpmjim/CNextjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpmjim/CNextjs/issues"
+  },
+  "homepage": "https://github.com/jpmjim/CNextjs#readme",
+  "dependencies": {
+    "next": "^12.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
