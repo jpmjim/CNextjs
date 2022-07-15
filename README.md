@@ -11,3 +11,8 @@ Curso de Next.js
   - Entorno de desarrollo con soporte Fast Refresh
   - Rutas de API para crear endpoints de API con funciones sin servidor
   - Totalmente ampliable
+
+## Nuestro proyecto y lo que necesitaremos
+  [Repo del proyecto](https://github.com/jonalvarezz/platzi-nextjs)
+  
+  [Desplegado en Vercel](https://platzi-avo.vercel.app/)
