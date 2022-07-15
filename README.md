@@ -43,3 +43,9 @@ Curso de Next.js
 
   ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-12-04%20a%20la%28s%29%201.05.11-19974b7e-13dd-4ce9-9858-e9dd903e8159.jpg)
 
+## Rutas dinámicas
+  - Las rutas dinámicas son las que se generan de una forma consecutiva dependiendo de variables de entrada
+  - Las rutas dinámicas se generan de la siguiente forma: `/:variable` o `/:variable/:variable2` 
+
+  [Dynamic Routes](https://nextjs.org/docs/routing/dynamic-routes)
+
