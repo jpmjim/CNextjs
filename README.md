@@ -75,3 +75,13 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
 [The Benefits of Server Side Rendering Over Client Side Rendering](https://medium.com/walmartglobaltech/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8)
 
 ![](https://miro.medium.com/max/1400/1*jJkEQpgZ8waQ5P-W5lhxuQ.png)
+
+## Enlazando páginas
+  [next/link](https://nextjs.org/docs/api-reference/next/link)
+  Next.JS requiere que dentro del componente de Link se encuentre una etiqueta <a></a>, de forma que sea amigable para el SEO. Si no la agregas, de igual forma funciona, pero verás un warning de parte de Next.JS.
+
+  Pueden ver un poco más de información de como trabajar con Styled Components o Componentes que envuelven la etiqueta <a>
+
+  No sufre ningun tipo de recarga de página, ya que el código de la página se carga en tiempo de ejecución esto es [Single Page Application](https://nextjs.org/docs/routing/introduction#linking-between-pages)
+
+  
