@@ -98,4 +98,16 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
 
 ## ¿Cómo crear API con NextJS?
   Configurando una API con Next.JS y TypeScript.
-  
+
+## Creando y consumiendo nuestra propia API
+  Creamos una página o ruta dinamica para el producto.
+  ![](https://static.platzi.com/media/user_upload/code-83ebf081-9e4c-4108-a524-ab99b66e98bb.jpg)
+
+  Debug en nextjs dentro del package.json creamos un script para que se ejecute una vez que se haya compilado el código:
+  ```
+  "debug": "NODE_OPTIONS=--'inspect' next",
+  ```
+  Y dentro del navegador ejecutamos el comando:
+  ```
+  about:inspect
+  ```
