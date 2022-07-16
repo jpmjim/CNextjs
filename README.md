@@ -95,3 +95,7 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
     Que si los archivos a hacer prefetch son muy pesados, es posible que nunca se realice el prefetch porque nunca acaba.
 
   Es por eso que Next.JS usa un enfoque de múltiples archivos hacerlos portables y pequeños
+
+## ¿Cómo crear API con NextJS?
+  Configurando una API con Next.JS y TypeScript.
+  
