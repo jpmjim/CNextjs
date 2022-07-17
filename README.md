@@ -111,3 +111,10 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
   ```
   about:inspect
   ```
+## Solucion del reto
+  Ejemplo 2 :
+  ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-12-16%20a%20la%28s%29%2016.59.59-1b001f08-cc15-47f5-b1d8-94e0f93489ed.jpg)
+
+  ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-12-16%20a%20la%28s%29%2017.00.16-aca2cda2-f272-4d2f-a54e-356665c94445.jpg) 
+
+  ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-12-16%20a%20la%28s%29%2017.01.45-97794b30-60ba-4c40-8841-b71ed4c67f54.jpg) 
