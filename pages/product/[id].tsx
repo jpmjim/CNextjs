@@ -29,6 +29,7 @@ const ProductPage = () => {
         <p>Name: {product?.name}</p>
         <p>Price: {product?.price}</p>
         <p>Description: {product?.sku}</p>
+        <img src={product?.image} alt="" />
       </div>
     </section>
   )

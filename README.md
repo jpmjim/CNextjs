@@ -117,4 +117,25 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
 
   ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-12-16%20a%20la%28s%29%2017.00.16-aca2cda2-f272-4d2f-a54e-356665c94445.jpg) 
 
-  ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-12-16%20a%20la%28s%29%2017.01.45-97794b30-60ba-4c40-8841-b71ed4c67f54.jpg) 
+  ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-12-16%20a%20la%28s%29%2017.01.45-97794b30-60ba-4c40-8841-b71ed4c67f54.jpg)
+
+
+## Extendiendo el Document
+  Extender Next.JS para que nos permita crear un documento personalizado.
+  
+  Document.- Archivo principal de nuestra pagina donde los cambios se pueden aplicar a una escala global.
+
+  Documentation de Next.js custom document:
+  [Custom Document](https://nextjs.org/docs/advanced-features/custom-document)
+
+  La estructura de nuestro proyecto suele ser
+
+    Nuestra Aplicación
+        Document
+            App
+  
+  Normalmente solemos editar los primeros dos items.
+
+  Para poder editarlo creamos un archivo en pages llamado “_document.js” para usar un template definido podemos ir a la documentation de Next.js para un custom document.
+
+  En esta clase podemos observar que para editar directamente el document debemos crear una pagina en pages, con el nombre de “_document.js” y usar como template el codígo de la documentación de Next.js.
