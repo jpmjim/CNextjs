@@ -3,7 +3,7 @@ import Navbar from '@components/Navbar/Navbar'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
+    <div className='container'>
       <Navbar />
       {children}
       <footer>This is the footer</footer>

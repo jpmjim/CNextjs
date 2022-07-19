@@ -200,3 +200,24 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
     }
   }
   ```
+
+## Explora las soluciones de CSS en NextJS y su flexibilidad
+  3 Tipos soport de CSS en NextJS
+    - Global CSS (.css)
+    - Module CSS (.module.css)
+    - CSS-in-JS Styled JSX 
+
+  Para los que usamos SCSS o SASS podemos usar el plugin de Next.JS para que nos ayude a convertir nuestro CSS a CSS que pueda ser usado en el navegador.
+  - [Customizing PostCSS Config](https://nextjs.org/docs/advanced-features/css-modules)
+  - [Built-In CSS Support](https://nextjs.org/docs/basic-features/built-in-css-support)
+
+  Trabajar con sass
+  ```
+    npm i sass --save-dev
+    npm i node-sass --save-dev
+    npm i @zeit/next-sass --save-dev
+  ```
+
+  Si desean ver su código al estilo de css le adjunto este formateador de styles que esta disponible en extensiones de vscode [styled-jsx](https://marketplace.visualstudio.com/items?itemName=blanu.vscode-styled-jsx)
+
+  [Next.js + Styled Components The Really Simple Guide](https://dev.to/aprietof/nextjs--styled-components-the-really-simple-guide----101c)
