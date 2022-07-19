@@ -139,3 +139,47 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
   Para poder editarlo creamos un archivo en pages llamado “_document.js” para usar un template definido podemos ir a la documentation de Next.js para un custom document.
 
   En esta clase podemos observar que para editar directamente el document debemos crear una pagina en pages, con el nombre de “_document.js” y usar como template el codígo de la documentación de Next.js.
+
+## Extendiendo el App
+  [Custom App](https://nextjs.org/docs/advanced-features/custom-app)
+  La renderización dentro Next.JS es de la siguiente forma:
+  ```
+  Document
+    App
+      Componente
+  ```
+
+  Layout Children - Es un componente que se encarga de renderizar el contenido de la página.
+  Forma 1 
+  ```javascript
+  import React from 'react'
+  import Navbar from 'components/Navbar/Navbar'
+
+  const Layout: React.FC = ({ children }) => {
+    return (
+      <div>
+        <Navbar />
+        {children}
+        <footer>This is the footer</footer>
+      </div>
+    )
+  }
+
+  export default Layout
+  ```
+  Forma 2
+  ```javascript
+  import React from 'react'
+  import Navbar from '../Navbar/Navbar'
+
+  const Layout = ({ children }: { children: React.ReactNode }) => {
+    return (
+      <div>
+        <Navbar />
+        {children}
+        <footer>This is the footer</footer>
+      </div>)
+  }
+
+  export default Layout
+  ```
