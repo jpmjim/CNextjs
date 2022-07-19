@@ -183,3 +183,20 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
 
   export default Layout
   ```
+## Path alias
+  Con esta implementación de NextJS podemos evitar el ‘dot hell’ en las rutas: ../../../../../cosa.tsx
+
+  [Absolute Imports and Module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
+
+  Ejemplo de configuración:
+  ``` ts
+  // tsconfig.json or jsconfig.json
+  {
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/components/*": ["components/*"]
+      }
+    }
+  }
+  ```
