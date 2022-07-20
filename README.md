@@ -360,3 +360,29 @@ SSG ➡ ❎ Lo mejor de los dos mundos
   - Los datos provienen del sistema de archivos.
   - Los datos se pueden almacenar en caché públicamente (no específicos del usuario)
   - La página debe estar renderizada previamente (para SEO) y ser muy rápida. getStaticPropsgenera HTML y JSONarchivos, los cuales pueden ser almacenados en caché por un CDN para el rendimiento
+
+----------------------------------------------------------------------------------------------------------
+## Otras formas de hacer deploy de una app NextJS
+  Convirtiendo todas las paginas staticas.
+  - Nos movemos a una nueva rama "git checkout -b pages-static".
+  - Hacemos un build del proyecto.
+    ```
+    npm run build
+    ```
+  - Dentron de package.json añadiños el script:
+  ```
+  "export": "next export",
+  ```
+  - Dentro de la carpeta out se generaron todas las paginas staticas.
+  - Podemos usar cualquier servidor estatico para html plano con el siguiente comando dentor de la carpeta de out "/out/":
+  ``` bash
+  npx serve .
+
+  Serving!                                       
+   │                                                   │
+   │   - Local:            http://localhost:44265      │
+   │   - On Your Network:  http://192.168.1.34:44265   │
+   │                                                   │
+   │   This port was picked because 3000 is in use.    │
+   │                                                   |
+  ```

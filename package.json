@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "debug": "NODE_OPTIONS=--'inspect' next",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "export": "next export"
   },
   "repository": {
     "type": "git",
