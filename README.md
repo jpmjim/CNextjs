@@ -257,3 +257,21 @@ export default HelloWorld
   [CNextjs](https://curso-nextjs-topaz.vercel.app/)
   [Musica](https://app-music-delta.vercel.app/)
   [Repo](https://github.com/juliosarango/app-music)
+
+## Introducción a los pre-render modes
+  - CSR: No es amigable con el SEO, es la manera en la que están hechas las páginas con react (Todo se construye desde un archivo javascript. Luego crea y monta la aplicación en un root en el archivo html que está practicamente vacio)
+
+  - SSR: La aplicación se renderiza desde el servidor. A diferencia de CSR donde te envian un archivo html vacio solo con un root y un (o varios) archivo(s) js. Acá se crean plantillas desde el servidor, sirviendo contenido estático en el html que envían y los datos dinamicos (como los de una api) pueden ser traidos desde el cliente.
+
+  - SSG: Es una belleza donde se crean archivos completamente estáticos en el momento de compilación. Es lo mejor, ya que al tener contenido estático, nuestro sítio se hará super veloz
+
+  CSR ➡ ❌ Afecta el SEO
+✔ algo positivo no tenemos problemas de TTFB (Time To First Byte)
+
+SSR ➡ ❌ Afecta el redimiendo de nuestro sitio web con el TTFB (Time To First Byte)
+✔ algo positivo es que mejora el SEO
+
+SSG ➡ ❎ Lo mejor de los dos mundos
+✔ No tenemos problemas de TTFB ni tampoco con el SEO
+
+  [Server-side vs Client-side Routing](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
