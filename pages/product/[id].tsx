@@ -1,37 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
+import fetch from 'isomorphic-unfetch'
+
+import Layout from '@components/Layout/Layout'
+import ProductSummary from '@components/ProductSummary/ProductSummary'
 
 const ProductPage = () => {
-  // state
-  const [product, setProduct] = useState<TProduct>()
-  // router
-  const {
-    query: { id },
-  } = useRouter()
+  const { query } = useRouter()
+  const [product, setProduct] = useState<TProduct | null>(null)
 
   useEffect(() => {
-    if (id) {
-      window
-        .fetch(`/api/avo/${id}`)
-        .then((res) => res.json())
-        .then((data) => setProduct(data))
+    if (query.id) {
+      fetch(`/api/avo/${query.id}`)
+        .then((response) => response.json())
+        .then((data: TProduct) => {
+          setProduct(data)
+        })
     }
-  }, [id])
+  }, [query.id])
 
   return (
-    <section>
-      <h1>Página producto: {product?.name} </h1>
-      <Link href="/">
-        <a>Home</a>
-      </Link>
-      <div>
-        <p>Name: {product?.name}</p>
-        <p>Price: {product?.price}</p>
-        <p>Description: {product?.sku}</p>
-        <img src={product?.image} alt="" />
-      </div>
-    </section>
+    <Layout>
+      {product == null ? null : <ProductSummary product={product} />}
+    </Layout>
   )
 }
 
