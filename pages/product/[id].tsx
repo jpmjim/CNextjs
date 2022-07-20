@@ -1,23 +1,38 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import fetch from 'isomorphic-unfetch'
+import { GetStaticProps } from 'next'
 
 import Layout from '@components/Layout/Layout'
 import ProductSummary from '@components/ProductSummary/ProductSummary'
 
-const ProductPage = () => {
-  const { query } = useRouter()
-  const [product, setProduct] = useState<TProduct | null>(null)
+export const getStaticPaths = async () => {
+  const res = await fetch('https://curso-nextjs-topaz.vercel.app/api/avo')
+  const { data: productList }: TAPIAvoResponse = await res.json()
+  const paths = productList.map(({ id }) => ({
+    params: {
+      id,
+    } 
+  }))
+  return {
+    paths,
+    fallback: false,
+  }
+}
 
-  useEffect(() => {
-    if (query.id) {
-      fetch(`/api/avo/${query.id}`)
-        .then((response) => response.json())
-        .then((data: TProduct) => {
-          setProduct(data)
-        })
-    }
-  }, [query.id])
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const id = params?.id as string
+  const res = await fetch(`https://curso-nextjs-topaz.vercel.app/api/avo/${id}`)
+  const product: TProduct = await res.json()
+
+return {
+  props: {
+    product,
+  }
+}
+}
+
+const ProductPage = ({ product }: { product: TProduct}) => {
 
   return (
     <Layout>

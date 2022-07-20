@@ -336,3 +336,27 @@ SSG ➡ ❎ Lo mejor de los dos mundos
   - GetServerSiteProps en caso de tu aplicación utilize muchisma información y sea muy grande. 
   - GetStaticProps cuando tu aplicación no sea muy grande o que no use mucha información. Esto es porque si tu app es muy grande y usas GetStaticProps, esta se volverá mas lenta en las recargas. Lo cual es pésimo para el SEO. Sin embargo GetStaticProps funciona muy bien cuando la app no usa muchos datos, ya que así se optimiza la velocidad de carga.
 
+## UnderTheHood Static Dynamic Static Generation: getStaticPaths
+  Lo haremos en la pagina de detalles de un producto. /pages/producto/[id].tsx
+
+  Comandos a correr se genera las direcciones de las paginas:
+  ```
+  npm run build
+  ├ ● /product/[id] (8936 ms)                5.15 kB         132 kB
+    ├ /product/2zd33b8c (1963 ms)
+    ├ /product/t9dv25gs (1244 ms)
+    ├ /product/7bcr49em (1006 ms)
+    ├ /product/ewxsd6xb (969 ms)
+    ├ /product/t345w48y (929 ms)
+    ├ /product/fpr72m9k (880 ms)
+    ├ /product/6trfgkkj (734 ms)
+     └ [+2 more paths] (avg 606 ms)
+  ```
+
+  Deberías usar getStaticPathssi está pre-renderizando estáticamente páginas que usan rutas dinámicas y:
+
+  - Los datos provienen de un CMS sin cabeza
+  - Los datos provienen de una base de datos.
+  - Los datos provienen del sistema de archivos.
+  - Los datos se pueden almacenar en caché públicamente (no específicos del usuario)
+  - La página debe estar renderizada previamente (para SEO) y ser muy rápida. getStaticPropsgenera HTML y JSONarchivos, los cuales pueden ser almacenados en caché por un CDN para el rendimiento
