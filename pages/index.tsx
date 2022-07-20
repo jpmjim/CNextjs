@@ -6,7 +6,7 @@ import KawaiiHeader from '@components/KawaiiHeader/KawaiiHeader'
 import ProductList from '@components/ProductList/ProductList'
 
 // Rendering dentro de nuestro servidor
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     const res = await fetch('https://curso-nextjs-topaz.vercel.app/api/avo')
     const { data: productList }: TAPIAvoResponse = await res.json()
 

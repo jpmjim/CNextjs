@@ -276,7 +276,11 @@ SSG ➡ ❎ Lo mejor de los dos mundos
 
   [Server-side vs Client-side Routing](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
 
+----------------------------------------------------------------------------------------------------------
+  [Data Fetching Overview](https://nextjs.org/docs/basic-features/data-fetching/overview#getstaticprops-static-generation)
+
 ## UnderTheHood Server Side Rendering: getServerSideProps
+  Icono λ
   Comandos a correr:
   ```
   npm run build
@@ -298,3 +302,37 @@ SSG ➡ ❎ Lo mejor de los dos mundos
   ```
 
    La carga desde el cliente se mueve hacia el servidor con la función getServerSideProps y retornar un objeto con una propiedad llamada prop, entonces si la API tarda en responder la pagina tardara en dar una respuesta.
+
+## UnderTheHood Static Generation: getStaticProps
+  Icono ●
+  Podemos ver los cambios cuando lo corremos en producción con el siguiente comando:
+  ```
+  npm run build
+  npm run start
+  ```
+
+  Funciona de igual forma que getServerSideProps. A diferencia del server side el cual funciona on demand, cada vez que hay un request del usuario el server debe hacer otro request a la API que deseemos consumir. En cambio de esta manera este request solo se da una sola vez, cuando lo compilamos
+
+  RESUMEN: Esta manera de hacer Request nos ayuda de una manera increíble de tal forma que los datos estén directamente listos
+
+  [getStaticProps](https://nextjs.org/docs/basic-features/data-fetching/get-static-props)
+
+  Deberías usar getStaticPropssi:
+
+  - Los datos necesarios para representar la página están disponibles en el momento de la compilación antes de la solicitud de un usuario.
+  - Los datos provienen de un CMS sin cabeza
+  - La página debe estar renderizada previamente (para SEO) y ser muy rápida. getStaticPropsgenera HTMLy JSONarchivos, los cuales pueden ser almacenados en caché por un CDN para el rendimiento
+  - Los datos se pueden almacenar en caché públicamente (no específicos del usuario). Esta condición se puede omitir en ciertas situaciones específicas mediante el uso de un Middleware para reescribir la ruta.
+
+
+  - GetServerSiteProps: Lo que hace es que cuando un sitio web es cargado por primera vez (osea cuando lo buscas en tu navegador). El servidor solo se envía la información que se requiere para poder renderizar la pagina inicial (es decir solo se envía la información de la pagina que aparece cuando buscas un sitio web) Pero en caso que quieras acceder a otra de las paginas que tiene ese mismo sitio web. Entonces el sitio web le pedirá al servidor que envíe la información que se requiere para renderizar esa otra pagina. Y así cada vez que se visite alguna pagina propia del sitio web que visites. Así es como funcionan los sitios web normalmente.
+
+  - GetStaticProps: Lo que hace es que cuando un sitio web es cargado por primera vez (ósea cuando lo buscas en tu navegador). El servidor enviará toda la información que se requiere para poder renderizar absolutamente todas las paginas del sitio web. Y en caso que quieras acceder a otra de las paginas que tiene ese mismo sitio web. Entonces el sitio web simplemente se cambiara su estructura y elementos sin hacer ninguna solicitud adicional al servidor, por el hecho de ya tiene toda información que todas las paginas del sitio we requieren. Y así cada vez que se visite alguna pagina propia del sitio web que visites. Esto es como funcionan los sitios web que se basan en la filosofía de Server Side Rendering.
+
+  ¿ Cual de los dos uso ?:
+
+  Como pudiste apreciar, las diferencias son muy grandes. Y la decisión de usar uno u otro no es una elección al gusto o porque si. Es según lo que requiera tu aplicación. Específicamente deberías de usar 
+
+  - GetServerSiteProps en caso de tu aplicación utilize muchisma información y sea muy grande. 
+  - GetStaticProps cuando tu aplicación no sea muy grande o que no use mucha información. Esto es porque si tu app es muy grande y usas GetStaticProps, esta se volverá mas lenta en las recargas. Lo cual es pésimo para el SEO. Sin embargo GetStaticProps funciona muy bien cuando la app no usa muchos datos, ya que así se optimiza la velocidad de carga.
+
