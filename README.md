@@ -360,3 +360,19 @@ SSG ➡ ❎ Lo mejor de los dos mundos
   - Los datos provienen del sistema de archivos.
   - Los datos se pueden almacenar en caché públicamente (no específicos del usuario)
   - La página debe estar renderizada previamente (para SEO) y ser muy rápida. getStaticPropsgenera HTML y JSONarchivos, los cuales pueden ser almacenados en caché por un CDN para el rendimiento
+
+
+## Mide Performance en NextJS
+  [Real Performance](https://nextjs.org/analytics)
+  
+  [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
+  
+  Hydration.- tiempo en que el JS de React comienza a funcionar
+
+  FCP.- First Content Paint
+
+  TTFB.- Time to first bite, indicador del tiempo en requerir cosas de otro servidor
+
+  Next.js nos ayuda bastante con herramientas de performance.
+
+  Para ello dentro de _app.js agregamos y exportamos la función reportWebVitals, este recibe un parámetro llamado metric.
