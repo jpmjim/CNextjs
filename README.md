@@ -258,6 +258,12 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
   [Musica](https://app-music-delta.vercel.app/)
   [Repo](https://github.com/juliosarango/app-music)
 
+  [Fresh Fruits](https://next-js-sand-tau-80.vercel.app/)
+  [Repo](https://github.com/mary-caraveo/next-js)
+
+  [avostore](https://avostore-baltazar.vercel.app/)
+  [Repo](https://github.com/baltazarandersson/avostore)
+
 ## Introducción a los pre-render modes
   - CSR: No es amigable con el SEO, es la manera en la que están hechas las páginas con react (Todo se construye desde un archivo javascript. Luego crea y monta la aplicación en un root en el archivo html que está practicamente vacio)
 
@@ -364,7 +370,7 @@ SSG ➡ ❎ Lo mejor de los dos mundos
 
 ## Mide Performance en NextJS
   [Real Performance](https://nextjs.org/analytics)
-  
+
   [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
   
   Hydration.- tiempo en que el JS de React comienza a funcionar
@@ -376,3 +382,8 @@ SSG ➡ ❎ Lo mejor de los dos mundos
   Next.js nos ayuda bastante con herramientas de performance.
 
   Para ello dentro de _app.js agregamos y exportamos la función reportWebVitals, este recibe un parámetro llamado metric.
+
+## Actulizacion de dependencias NPM
+  - npm install -g npm-check-updates
+  - ncu -u
+  
