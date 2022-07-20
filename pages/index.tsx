@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import  fetch from 'isomorphic-unfetch'
+import Link from 'next/link'
+import fetch from 'isomorphic-unfetch'
 import Layout from '@components/Layout/Layout'
 import KawaiiHeader from '@components/KawaiiHeader/KawaiiHeader'
 import ProductList from '@components/ProductList/ProductList'
@@ -21,7 +22,18 @@ const HomePage = ({productList}: {productList:TProduct[]}) => {
   return (
     <Layout>
       <KawaiiHeader />
+      <section>
+        <Link href="/yes-or-no">
+          <a>¿Deberia comer un avo hoy?</a>
+        </Link>
+      </section>
       <ProductList products={productList} />
+      <style jsx>{`
+        section {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      `}</style>
     </Layout>
   )
 }
