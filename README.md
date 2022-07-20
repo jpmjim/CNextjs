@@ -229,8 +229,8 @@ En conclusión, el SSR es muy útil, ya que nos ayuda a que el usuario no abando
       )
     }
 
-export default HelloWorld
-```
+  export default HelloWorld
+  ```
 
   Para los que usamos SCSS o SASS podemos usar el plugin de Next.JS para que nos ayude a convertir nuestro CSS a CSS que pueda ser usado en el navegador.
   - [Customizing PostCSS Config](https://nextjs.org/docs/advanced-features/css-modules)
@@ -275,3 +275,26 @@ SSG ➡ ❎ Lo mejor de los dos mundos
 ✔ No tenemos problemas de TTFB ni tampoco con el SEO
 
   [Server-side vs Client-side Routing](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
+
+## UnderTheHood Server Side Rendering: getServerSideProps
+  Comandos a correr:
+  ```
+  npm run build
+  npm run dev
+  ```
+
+  Client Side rendered.- El Html se esta produciendo desde el cliente
+
+  Usamos useEffect para traer la información de la API, debido a esto estamos renderizando desde el cliente. Es decir que desde el servidor no esta información de los elementos.
+
+  Para poder extraer los datos desde el cliente lo que debemos hacer es usar la siguiente función:
+  ```ts
+  export const getServerSideProps = async (context: NextPageContext) => {
+    const { id } = context.query
+    const res = await fetch(`https://api.example.com/items/${id}`)
+    const item = await res.json()
+    return { props: { item } }
+  }
+  ```
+
+   La carga desde el cliente se mueve hacia el servidor con la función getServerSideProps y retornar un objeto con una propiedad llamada prop, entonces si la API tarda en responder la pagina tardara en dar una respuesta.
