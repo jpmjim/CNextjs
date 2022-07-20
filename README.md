@@ -252,3 +252,8 @@ export default HelloWorld
   Si desean ver su código al estilo de css le adjunto este formateador de styles que esta disponible en extensiones de vscode [styled-jsx](https://marketplace.visualstudio.com/items?itemName=blanu.vscode-styled-jsx)
 
   [Next.js + Styled Components The Really Simple Guide](https://dev.to/aprietof/nextjs--styled-components-the-really-simple-guide----101c)
+
+## Deploy en Vercel
+  [CNextjs](https://curso-nextjs-topaz.vercel.app/)
+  [Musica](https://app-music-delta.vercel.app/)
+  [Repo](https://github.com/juliosarango/app-music)
