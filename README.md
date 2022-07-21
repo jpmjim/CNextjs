@@ -386,4 +386,6 @@ SSG ➡ ❎ Lo mejor de los dos mundos
 ## Actulizacion de dependencias NPM
   - npm install -g npm-check-updates
   - ncu -u
-  
+
+
+## [Link](https://nextjs.org/docs/api-reference/next/link) y [Proxy](https://nextjs.org/docs/api-reference/next.config.js/rewrites)
