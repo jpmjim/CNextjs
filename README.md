@@ -389,3 +389,5 @@ SSG ➡ ❎ Lo mejor de los dos mundos
 
 
 ## [Link](https://nextjs.org/docs/api-reference/next/link) y [Proxy](https://nextjs.org/docs/api-reference/next.config.js/rewrites)
+
+Mejorarlo con tailwind
